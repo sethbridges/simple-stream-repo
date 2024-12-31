@@ -7,5 +7,16 @@ export default defineNuxtConfig({
     '/': { prerender: true },
   },
 
-  compatibilityDate: '2024-12-16'
+  compatibilityDate: '2024-12-16',
+  modules: ['@kgierke/nuxt-basic-auth'],
+
+  basicAuth: {
+    enabled: true,
+    users: [
+      {
+        username: "foo",
+        password: "bar",
+      }
+    ]
+  }
 });
